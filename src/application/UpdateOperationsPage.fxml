@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="865.0" prefWidth="1319.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UpdateOperationsController">
+   <children>
+      <AnchorPane prefHeight="865.0" prefWidth="1333.0">
+         <children>
+            <Label alignment="CENTER" layoutX="47.0" layoutY="41.0" prefHeight="101.0" prefWidth="643.0" text="Update Operations for Product Table" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="378.0" prefHeight="21.0" prefWidth="144.0" text="Product Name" />
+            <Label layoutX="70.0" layoutY="442.0" prefHeight="21.0" prefWidth="104.0" text="Selling Price" />
+            <Label layoutX="70.0" layoutY="510.0" prefHeight="21.0" prefWidth="104.0" text="Section Name" />
+            <TextField fx:id="productNameText" layoutX="403.0" layoutY="373.0" />
+            <TextField fx:id="productSellingPrice" layoutX="403.0" layoutY="437.0" />
+            <TextField fx:id="searchProductText" layoutX="403.0" layoutY="230.0" />
+            <Button fx:id="insertProductButton" layoutX="71.0" layoutY="668.0" mnemonicParsing="false" onAction="#onInsertButtonListener" prefHeight="31.0" prefWidth="133.0" text="Insert" />
+            <Button fx:id="updateProductButton" layoutX="280.0" layoutY="668.0" mnemonicParsing="false" onAction="#onUpdateButtonListener" prefHeight="31.0" prefWidth="117.0" text="Update" />
+            <Button fx:id="deleteProductButton" layoutX="462.0" layoutY="668.0" mnemonicParsing="false" onAction="#onDeleteButtonListener" prefHeight="31.0" prefWidth="117.0" text="Delete" />
+            <Button fx:id="reportPageButton" layoutX="70.0" layoutY="747.0" mnemonicParsing="false" onAction="#onReportPageButtonListener" prefHeight="31.0" prefWidth="210.0" text="Go To Reports Page" />
+            <Button fx:id="searchProductButton" layoutX="70.0" layoutY="230.0" mnemonicParsing="false" onAction="#onSearchButtonListener" prefHeight="31.0" prefWidth="195.0" text="Search By Product Name" />
+            <ComboBox fx:id="productSectionChoice" layoutX="403.0" layoutY="505.0" prefHeight="31.0" prefWidth="187.0" />
+            <TableView fx:id="productTable" layoutX="778.0" layoutY="271.0" prefHeight="556.0" prefWidth="514.0">
+              <columns>
+                <TableColumn fx:id="productNameColumn" prefWidth="172.0" text="Product Name" />
+                <TableColumn fx:id="productPriceColumn" prefWidth="156.0" text="Selling Price" />
+                  <TableColumn fx:id="productSectionColumn" prefWidth="185.0" text="Section Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="displayProductTableButton" layoutX="778.0" layoutY="215.0" mnemonicParsing="false" onAction="#onDisplayProductTableButton" prefHeight="31.0" prefWidth="117.0" text="Display Table" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
